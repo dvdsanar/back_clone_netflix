@@ -8,4 +8,4 @@ router.post("/", controller.postAlquiler);
 router.patch("/:id", controller.patchAlquiler);
 router.delete("/:id", controller.deleteAlquiler);
 
-module.exports.router;
+module.exports = router;
