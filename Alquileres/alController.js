@@ -6,9 +6,9 @@ module.exports.getAlquileres = async (req, res) => {
   res.json(await Alquileres.find({}).populate(["idUsuario", "idPelicula"]));
 };
 
-module.exports.getAlquilerId = async (req, res) => {
+module.exports.getAlquilerIdUsuario = async (req, res) => {
   res.json(
-    await Alquileres.find({ _id: req.params.id }).populate([
+    await Alquileres.find({ idUsuario: req.params.idUsuario }).populate([
       "idUsuario",
       "idPelicula",
     ])
