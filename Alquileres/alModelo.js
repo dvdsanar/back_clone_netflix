@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 //Modelo para generar los usuarios de nuestra API, claves y tipo de valor que han de llevar
 const Schema = new mongoose.Schema({
-  fecha_alquiler: Number,
-  fecha_devolucion: Number,
+  fecha_alquiler: Date,
+  fecha_devolucion: Date,
   idUsuario: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Usuarios",
