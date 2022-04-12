@@ -7,9 +7,6 @@ const usRouter = require("./usuarios/usRutas.js");
 const alRouter = require("./Alquileres/alRutas.js");
 const dotenvDavid = require("dotenv");
 
-//Documentación de la API
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 //Función para el uso de variables de entorno
 dotenvDavid.config();
 
