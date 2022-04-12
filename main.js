@@ -4,9 +4,8 @@ const app = express();
 const conexion = require("./configuracion/conexion.js");
 const pelRouter = require("./peliculas/pelRutas.js");
 const usRouter = require("./usuarios/usRutas.js");
+const alRouter = require("./Alquileres/alRutas.js");
 const dotenvDavid = require("dotenv");
-const swaggerUi = require("swagger-ui-express");
-const swaggerDocument = require("./configuracion/openapi.js");
 
 //Documentación de la API
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -26,3 +25,4 @@ app.listen(process.env.PORT, () => console.log("Servidor levantado con éxito"))
 //rutas de los verbos de las peliculas y los usuarios y uso cada vez que sean llamados
 app.use("/usuarios", usRouter);
 app.use("/peliculas", pelRouter);
+app.use("/alquileres", alRouter);
