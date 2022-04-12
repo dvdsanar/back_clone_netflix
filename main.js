@@ -6,6 +6,7 @@ const pelRouter = require("./peliculas/pelRutas.js");
 const usRouter = require("./usuarios/usRutas.js");
 const alRouter = require("./Alquileres/alRutas.js");
 const dotenvDavid = require("dotenv");
+const cors = require("cors");
 
 //Función para el uso de variables de entorno
 dotenvDavid.config();
@@ -15,6 +16,7 @@ conexion();
 
 //Función para que nuestra applicación pueda recibir documentos en formato json
 app.use(express.json());
+app.use(cors());
 
 //Levantar el servidor de la API
 app.listen(process.env.PORT, () => console.log("Servidor levantado con éxito"));
