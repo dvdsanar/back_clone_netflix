@@ -8,7 +8,7 @@ module.exports.getAlquileres = async (req, res) => {
 
 module.exports.getAlquilerIdUsuario = async (req, res) => {
   res.json(
-    await Alquileres.find({ idUsuario: req.params.idUsuario }).populate([
+    await Alquileres.find({ idUsuario: req.params.id }).populate([
       "idUsuario",
       "idPelicula",
     ])
