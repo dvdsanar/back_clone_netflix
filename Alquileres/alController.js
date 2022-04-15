@@ -16,7 +16,9 @@ module.exports.getAlquilerIdUsuario = async (req, res) => {
 };
 
 module.exports.getAlquilerId = async (req, res) => {
-  res.json(await Alquileres.findOne({ _id: req.params.id }));
+  res.json(
+    await Alquileres.findOne({ _id: req.params.id }).populate(["idPelicula"])
+  );
 };
 
 module.exports.postAlquiler = async (req, res) => {
