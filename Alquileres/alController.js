@@ -15,6 +15,10 @@ module.exports.getAlquilerIdUsuario = async (req, res) => {
   );
 };
 
+module.exports.getAlquilerId = async (req, res) => {
+  res.json(await Alquileres.find({ _id: req.params.id }));
+};
+
 module.exports.postAlquiler = async (req, res) => {
   const alquiler = {
     fecha_alquiler: req.body.fecha_alquiler,
