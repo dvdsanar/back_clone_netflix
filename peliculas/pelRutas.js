@@ -6,6 +6,7 @@ const verificacion = require("../configuracion/middleware.js"); //Middleware par
 //Rutas de todos los verbos de nuestras funciones para las peliculas
 router.get("/", controller.traerPeliculas); //Cualquier rol puede acceder al no tener ningún parametro el middleware
 router.get("/:id", controller.traerPeliculasFiltros);
+router.get("/todas", controller.todasPeliculas);
 router.post("/", controller.nuevaPelicula); //Solo puede acceder el rol admin
 router.patch("/:id", controller.modificarPelicula);
 router.delete("/:id", controller.borrarPelicula);

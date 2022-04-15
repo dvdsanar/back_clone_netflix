@@ -29,6 +29,13 @@ module.exports.traerPeliculasFiltros = async (req, res) => {
     res.json(error);
   }
 };
+module.exports.todasPeliculas = async (req, res) => {
+  try {
+    res.json(await Peliculas.find({}));
+  } catch (error) {
+    res.json(error);
+  }
+};
 
 //Función para crear una nueva película
 module.exports.nuevaPelicula = async (req, res) => {
