@@ -5,7 +5,7 @@ const verificacion = require("../configuracion/middleware.js"); //Middleware par
 
 //Rutas de todos los verbos de nuestras funciones para los usuarios
 router.get("/", controller.traerUsuarios); //Cualquier rol puede acceder al no tener ningún parametro el middleware
-//router.get("/:id", controller.traerUsuariosID);
+router.get("/:id", controller.traerUsuariosID);
 router.post("/", controller.nuevoUsuario); //Solo puede acceder el rol admin
 router.patch("/:id", controller.modificarParteUsuario);
 router.delete("/:id", controller.borrarUsuario);
