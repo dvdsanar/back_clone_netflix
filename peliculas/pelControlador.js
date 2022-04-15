@@ -11,6 +11,7 @@ module.exports.traerPeliculas = async (req, res) => {
     if (req.query.actores) queryMovie.actores = req.query.actores;
     if (req.query.duracion) queryMovie.duracion = req.query.duracion;
     res.json(await Movies.find(queryMovie));
+    console.log(req.query.titulo + "req query", req.query);
   } catch (error) {
     res.json(error);
   }
