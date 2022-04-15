@@ -16,7 +16,7 @@ module.exports.getAlquilerIdUsuario = async (req, res) => {
 };
 
 module.exports.getAlquilerId = async (req, res) => {
-  res.json(await Alquileres.findOne({ _id: req.params._id }));
+  res.json(await Alquileres.findOne({ _id: req.params.id }));
 };
 
 module.exports.postAlquiler = async (req, res) => {
