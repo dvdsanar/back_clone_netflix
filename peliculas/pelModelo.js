@@ -7,6 +7,7 @@ const Schema = new mongoose.Schema({
   genero: String,
   actores: String,
   duracion: Number,
+  imagen: String,
 });
 const Model = mongoose.model("Peliculas", Schema);
 module.exports = Model;
